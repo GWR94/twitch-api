@@ -1,0 +1,148 @@
+.user__container {
+  height: 220px;
+  width: 100%;
+  display: inline-flex;
+  margin: 0 auto 10px;
+  background: #20222b;
+  color: white;
+}
+
+.user__details {
+  flex: 4 auto;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.user__partner {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 18px;
+  right: 10px;
+}
+
+.user__preview {
+  flex: 1 220px;
+  height: 100%;
+  justify-content: center;
+  border-right: 4px solid blueviolet;
+  border-top: 4px solid blueviolet;
+  border-bottom: 4px solid blueviolet;
+}
+
+.user__imageContainer {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  width: 170px;
+  margin: 0 40px;
+  @media (max-width: $md-breakpoint) {
+    width: 150px;
+    margin: 0 30px;
+  }
+  @media (max-width: $s-breakpoint) {
+    width: 130px;
+    margin: 0 20px;
+  }
+  @media (max-width: $xs-breakpoint) {
+    width: 110px;
+    margin: 0 10px;
+  }
+}
+
+.user__image {
+  height: 140px;
+  align-content: center;
+  @media (max-width: $md-breakpoint) {
+    height: 130px;
+  }
+  @media (max-width: $s-breakpoint) {
+    height: 110px;
+  }
+  @media (max-width: $xs-breakpoint) {
+    height: 80px;
+  }
+  border-radius: 50%;
+  border: 4px solid red;
+}
+
+.user__online > .user__imageContainer > a > .user__image {
+  border: 4px solid green;
+}
+
+.user__text {
+  font-size: 14px;
+  word-wrap: none;
+  padding-right: 10px;
+  @media (max-width: $md-breakpoint) {
+    font-size: 13px;
+  }
+  @media (max-width: $s-breakpoint) {
+    font-size: 12px;
+  }
+}
+
+.user__boldText {
+  display: inline-block;
+  color: rgb(163, 65, 255);
+  font-weight: bolder;
+  margin: 0;
+}
+
+.user__name {
+  margin: 3px 0;
+  font-weight: 800;
+  text-align: center;
+  width: 100%;
+  font-size: 16px;
+  @media (max-width: $md-breakpoint) {
+    font-size: 14px;
+  }
+  @media (max-width: $s-breakpoint) {
+    font-size: 12px;
+  }
+}
+
+.user__deleteIcon {
+  position: absolute;
+  z-index: 1;
+  font-size: 20px !important;
+  color: red;
+  right: 10px;
+  top: 8px;
+  cursor: pointer;
+}
+
+.user__infoContainer {
+  font-size: 14px;
+  display: inline-flex;
+  flex-direction: column;
+  min-height: 180px;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.user__streamPreview {
+  width: auto;
+  height: 100%;
+}
+
+.user__streamPreview--mature {
+  width: auto;
+  height: 100%;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}
+
+.user__online,
+.user__offline {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  border: 4px solid blueviolet;
+}

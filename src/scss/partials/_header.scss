@@ -1,0 +1,137 @@
+@import "../base/base";
+
+.header__search--button {
+  height: 40px !important;
+}
+
+.header__title {
+  color: $purple-twitch !important;
+  font-size: 40px !important;
+  text-align: center;
+  padding: 20px 0 10px !important;
+
+  @media (max-width: $md-breakpoint) {
+    font-size: 38px;
+  }
+
+  @media (max-width: $s-breakpoint) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $xs-breakpoint) {
+    font-size: 28px;
+  }
+}
+
+.header__button {
+  margin: 5px;
+  width: 70px;
+}
+
+.header__button--container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px auto;
+  width: 300px;
+}
+
+.header__input--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 23px;
+  margin-bottom: 22px;
+}
+
+.header__text {
+  text-align: center;
+}
+
+// Mature switch
+.header__mature--text {
+  margin-right: 5px;
+  margin-top: 7px;
+
+  @media (max-width: $md-breakpoint) {
+    font-size: 14px;
+  }
+}
+
+.header__mature--switch {
+  margin-left: 10px;
+  margin-top: 0;
+
+  @media (max-width: $md-breakpoint) {
+    margin-top: 4px;
+  }
+}
+
+.header__mature--container {
+  display: flex;
+  justify-content: center;
+  justify-items: start;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.header__switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 40px;
+}
+
+.header__switch > input {
+  display: none;
+}
+
+.header__slider {
+  -webkit-transition: 0.4s;
+  background-color: $gray;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  padding-top: -20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+
+  &::before {
+    -webkit-transition: 0.4s;
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 16px;
+  }
+}
+
+.header__slider,
+.header__round {
+  border-radius: 34px;
+
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+#check {
+  &:checked + .header__slider {
+    background-color: $check-red;
+
+    &::before {
+      -ms-transform: translateX(16px);
+      -webkit-transform: translateX(16px);
+      transform: translateX(16px);
+    }
+  }
+
+  &:focus + .header__slider {
+    box-shadow: 0 0 1px $check-red;
+  }
+}

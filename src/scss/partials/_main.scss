@@ -1,0 +1,78 @@
+@import "../base/base";
+
+.twitch__container {
+  font-family: "Cairo", sans-serif !important;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.twitch__footer-container {
+  padding-bottom: 60px;
+}
+
+.twitch__footer {
+  background: $darker-background;
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
+
+.twitch__header {
+  background: $darker-background;
+  color: white;
+  padding: 0 0 $s-size;
+  margin-bottom: 20px;
+}
+
+.twitch__header-text {
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (max-width: $md-breakpoint) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $s-breakpoint) {
+    font-size: 12px;
+  }
+
+  @media (max-width: $xs-breakpoint) {
+    font-size: 10px;
+  }
+}
+
+.twitch__header-subtext {
+  font-size: 15px;
+  margin: 8px auto;
+  text-align: center;
+
+  @media (max-width: $md-breakpoint) {
+    font-size: 13px;
+  }
+
+  @media (max-width: $s-breakpoint) {
+    font-size: 11px;
+  }
+
+  @media (max-width: $xs-breakpoint) {
+    font-size: 10px;
+  }
+}
+
+#offline-users {
+  margin-bottom: 40px;
+}
+
+.twitch__search--input {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}

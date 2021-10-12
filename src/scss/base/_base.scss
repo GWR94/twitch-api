@@ -1,0 +1,27 @@
+// Colors
+$purple-twitch: rgb(163, 65, 255);
+$check-red: rgb(243, 33, 33);
+$darker-background: #20222b;
+$gray: #333;
+
+// Spacing
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+//Font Sizes
+$font-size-large: 2rem;
+$font-size-medium: 1.7rem;
+$font-size-small: 1.4rem;
+
+//Break points
+$xl-breakpoint: 1690px;
+$l-breakpoint: 1280px;
+$md-breakpoint: 980px;
+$s-breakpoint: 740px;
+$xs-breakpoint: 480px;
+
+* {
+  box-sizing: border-box;
+}
