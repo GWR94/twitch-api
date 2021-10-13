@@ -18,9 +18,13 @@
   height: 30px;
   width: 30px;
   position: absolute;
-  top: -10px;
-  right: 0;
+  top: -5px;
+  right: 2px;
   z-index: 2;
+  @media (max-width: $s-breakpoint) {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 .user__preview {
@@ -77,19 +81,19 @@
   z-index: 1;
 }
 
-.user__online > .user__imageContainer > a > .user__image {
+.user__online > .user__imageContainer > a > .user__image--inner > .user__image {
   border: 4px solid green;
 }
 
 .user__text {
-  font-size: 14px !important;
+  font-size: 16px !important;
   word-wrap: none;
   padding-right: 10px;
   @media (max-width: $md-breakpoint) {
-    font-size: 13px !important;
+    font-size: 15px !important;
   }
   @media (max-width: $s-breakpoint) {
-    font-size: 12px !important;
+    font-size: 13px !important;
   }
 }
 

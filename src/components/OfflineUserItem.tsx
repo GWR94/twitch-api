@@ -59,7 +59,7 @@ const UserDataItem: React.FC<OfflineUserProps> = ({
         <div className="user__offline">
           <div className="user__imageContainer">
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <div className="user__image">
+              <div className="user__image--inner">
                 {partner && (
                   <Tooltip
                     title="Verified Twitch Partner"
@@ -73,7 +73,11 @@ const UserDataItem: React.FC<OfflineUserProps> = ({
                     />
                   </Tooltip>
                 )}
-                <img alt={name} src={image || placeholder} />
+                <img
+                  alt={name}
+                  src={image || placeholder}
+                  className="user__image"
+                />
               </div>
             </a>
             <h4 className="user__name">{name}</h4>
