@@ -32,7 +32,7 @@ const UserDataItem: React.FC<OfflineUserProps> = ({
     const userDataJSON = localStorage.getItem(name);
     const userData = JSON.parse(userDataJSON as string);
     setState({ ...state, userData });
-  }, []);
+  }, [name, state]);
 
   const theme = createTheme();
   const desktop = useMediaQuery(theme.breakpoints.up("md"));

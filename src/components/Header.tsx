@@ -25,18 +25,22 @@ const Header = ({
 }: HeaderProps): JSX.Element => {
   const [streamer, setStreamer] = useState("");
 
-  const handleFormInput = (e: KeyboardEvent): void => {
-    if (e.key === "Enter") handleAddStreamer(streamer);
-  };
-
   useEffect((): (() => void) => {
     const input = document.getElementById("streamer-input");
+
+    const handleFormInput = (e: KeyboardEvent): void => {
+      if (e.key === "Enter") {
+        setStreamer("");
+        handleAddStreamer(streamer);
+      }
+    };
+
     input?.addEventListener("keydown", handleFormInput);
 
     return (): void => {
       input?.removeEventListener("keydown", handleFormInput);
     };
-  }, []);
+  }, [handleAddStreamer, streamer]);
 
   const handleAnimate = (node: HTMLElement | null, hide: boolean): boolean => {
     if (!node) return false;
@@ -167,7 +171,10 @@ const Header = ({
           variant="outlined"
           className="header__search--button"
           color="info"
-          onClick={(): void => handleAddStreamer(streamer)}
+          onClick={(): void => {
+            setStreamer("");
+            handleAddStreamer(streamer);
+          }}
           style={{
             borderTopLeftRadius: 0,
             borderBottomLeftRadius: 0,

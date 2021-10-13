@@ -87,7 +87,6 @@ const TwitchAPI: React.FC = (): JSX.Element => {
 
           if (
             !onlineUserData.find((user): boolean => {
-              console.log(user);
               return user.name === onlineUser.name;
             })
           ) {
@@ -134,7 +133,6 @@ const TwitchAPI: React.FC = (): JSX.Element => {
         severity: "error",
         message: "Unable to retrieve streamers. Please try reloading the page.",
       });
-      console.log(err);
     }
   };
 
@@ -142,7 +140,6 @@ const TwitchAPI: React.FC = (): JSX.Element => {
     streamer: string
   ): Promise<boolean | void> => {
     const bearer = await handleGetAuthentication();
-    console.log(streamer);
 
     const users = [...state.users, streamer];
 
