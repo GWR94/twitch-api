@@ -30,7 +30,7 @@ const TwitchAPI: React.FC = (): JSX.Element => {
   const handleGetAuthentication = async (): Promise<void> => {
     try {
       const res = await fetch(
-        `https://id.twitch.tv/oauth2/token?client_id=${process.env.TWITCH_CLIENT_ID}&client_secret=${process.env.TWITCH_ACCESS_TOKEN}&grant_type=client_credentials`,
+        `https://id.twitch.tv/oauth2/token?client_id=${process.env.REACT_APP_TWITCH_CLIENT_ID}&client_secret=${process.env.REACT_APP_TWITCH_ACCESS_TOKEN}&grant_type=client_credentials`,
         { method: "POST" }
       );
       const user = await res.json();
@@ -51,7 +51,7 @@ const TwitchAPI: React.FC = (): JSX.Element => {
           .join("")}`,
         {
           headers: {
-            "Client-ID": process.env.TWITCH_CLIENT_ID as string,
+            "Client-ID": process.env.REACT_APP_TWITCH_CLIENT_ID as string,
             Authorization: `Bearer ${bearer}` as string,
           },
         }
@@ -64,7 +64,7 @@ const TwitchAPI: React.FC = (): JSX.Element => {
           `https://api.twitch.tv/helix/streams?user_id=${user.id}`,
           {
             headers: {
-              "Client-ID": process.env.TWITCH_CLIENT_ID as string,
+              "Client-ID": process.env.REACT_APP_TWITCH_CLIENT_ID as string,
               Authorization: `Bearer ${bearer}` as string,
             },
           }
@@ -151,7 +151,7 @@ const TwitchAPI: React.FC = (): JSX.Element => {
         `https://api.twitch.tv/helix/users?login=${streamer}`,
         {
           headers: {
-            "Client-ID": process.env.TWITCH_CLIENT_ID as string,
+            "Client-ID": process.env.REACT_APP_TWITCH_CLIENT_ID as string,
             Authorization: `Bearer ${bearer}` as string,
           },
         }
