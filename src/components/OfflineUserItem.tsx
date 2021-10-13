@@ -57,7 +57,7 @@ const UserDataItem: React.FC<OfflineUserProps> = ({
     >
       <div className="user__details">
         <div className="user__offline">
-          <div className="user__imageContainer">
+          <div className="user__image--container">
             <a href={link} target="_blank" rel="noopener noreferrer">
               <div className="user__image--inner">
                 {partner && (

@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Twitch API",
+  "name": "Twitch API - Check the status of your favourite streamers.",
   "icons": [
     {
       "src": "favicon.ico",

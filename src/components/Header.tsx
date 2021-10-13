@@ -4,6 +4,7 @@ import {
   OutlinedInput,
   FormControl,
   InputLabel,
+  Container,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { ShowUserType } from "../interfaces/twitchAPI.i";
@@ -108,15 +109,19 @@ const Header = ({
     setShow("offline");
   };
   return (
-    <div>
+    <Container maxWidth="md">
       <Typography className="header__title">Twitch Streamers</Typography>
+      <Typography variant="subtitle1" className="header__subtitle" gutterBottom>
+        Check out the status of your latest streamers!
+      </Typography>
       <Typography variant="subtitle1" className="header__text" gutterBottom>
-        Feel free to add any streamers you wish to track. All streamers are
-        saved so you can come back and check their status.
+        Feel free to add and remove streamers at any time, as they will be
+        stored on your device so you can come back and check their status
+        whenever you'd like.
       </Typography>
       <Typography variant="subtitle2" className="header__text">
-        You can also remove any streamers you don&apos;t want to follow by
-        pressing the red cross.
+        You can remove any streamers you don&apos;t want to follow by pressing
+        the red cross.
       </Typography>
       <div className="header__button--container">
         <Button
@@ -198,7 +203,7 @@ const Header = ({
           </label>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };
 

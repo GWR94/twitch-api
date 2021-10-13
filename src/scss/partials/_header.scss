@@ -8,7 +8,8 @@
   color: $purple-twitch !important;
   font-size: 40px !important;
   text-align: center;
-  padding: 20px 0 10px !important;
+  padding-top: 20px !important;
+  font-family: "Bubblegum Sans", cursive !important;
 
   @media (max-width: $md-breakpoint) {
     font-size: 38px;
@@ -20,6 +21,22 @@
 
   @media (max-width: $xs-breakpoint) {
     font-size: 28px;
+  }
+}
+
+.header__subtitle {
+  color: lighten($purple-twitch, 20%) !important;
+  font-size: 24px !important;
+  text-align: center;
+  font-family: "Bubblegum Sans", cursive !important;
+  margin-top: -10px !important;
+  margin-bottom: 20px !important;
+  @media (max-width: $md-breakpoint) {
+    font-size: 22px;
+  }
+
+  @media (max-width: $s-breakpoint) {
+    font-size: 20px;
   }
 }
 

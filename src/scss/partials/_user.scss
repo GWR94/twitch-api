@@ -36,7 +36,7 @@
   border-bottom: 4px solid blueviolet;
 }
 
-.user__imageContainer {
+.user__image--container {
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +81,11 @@
   z-index: 1;
 }
 
-.user__online > .user__imageContainer > a > .user__image--inner > .user__image {
+.user__online
+  > .user__image--container
+  > a
+  > .user__image--inner
+  > .user__image {
   border: 4px solid green;
 }
 
@@ -122,10 +126,17 @@
   position: absolute;
   z-index: 1;
   font-size: 20px !important;
-  color: red;
+  color: rgb(172, 0, 0);
   right: 10px;
   top: 8px;
   cursor: pointer;
+  &:hover {
+    color: lighten(rgb(172, 0, 0), 10%);
+    font-size: 24px !important;
+    top: 6px;
+    right: 8px;
+    transition: font-size 0.1s, top 0.1s, right 0.1s;
+  }
 }
 
 .user__infoContainer {
