@@ -52,25 +52,27 @@ const OnlineUserItem = ({
       <div className="user__details">
         <div className="user__online">
           <div className="user__imageContainer">
-            {partner && (
-              <Tooltip
-                title="Verified Twitch Partner"
-                arrow
-                placement="right-start"
-              >
-                <img
-                  src={partnerImg}
-                  alt="Verified Twitch Partner"
-                  className="user__partner"
-                />
-              </Tooltip>
-            )}
             <a href={link} target="_blank" rel="noopener noreferrer">
-              <img
-                alt={name}
-                src={image || placeholder}
-                className="user__image"
-              />
+              <div className="user__image--inner">
+                {partner && (
+                  <Tooltip
+                    title="Verified Twitch Partner"
+                    arrow
+                    placement="right-start"
+                  >
+                    <img
+                      src={partnerImg}
+                      alt="Verified Twitch Partner"
+                      className="user__partner"
+                    />
+                  </Tooltip>
+                )}
+                <img
+                  alt={name}
+                  src={image || placeholder}
+                  className="user__image"
+                />
+              </div>
             </a>
             <h4 className="user__name">{name}</h4>
           </div>

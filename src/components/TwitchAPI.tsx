@@ -18,7 +18,23 @@ const initialState: TwitchState = {
   users: storedUsers
     ? JSON.parse(storedUsers)
     : ["summit1g", "Pestily", "DeadlySlob"],
-  onlineUserData: [],
+  onlineUserData: [
+    {
+      game: "Escape from Tarkov",
+      image:
+        "https://static-cdn.jtvnw.net/jtv_user_pictures/d4d79c6d-e57c-487d-912d-e13e85d1a7bf-profile_image-300x300.png",
+      link: "https://www.twitch.tv/Glorious_E",
+      mature: true,
+      name: "Glorious_E",
+      online: true,
+      partner: true,
+      preview:
+        "https://static-cdn.jtvnw.net/previews-ttv/live_user_glorious_e-1024x576.jpg",
+      status:
+        "Twitch Rivals EU Tonight| !Youtube | !Snap | !Socials | !Glorious | !Merch",
+      viewers: "796",
+    },
+  ],
   offlineUserData: [],
   matureFilter: true,
   show: "all",

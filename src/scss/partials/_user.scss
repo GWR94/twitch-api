@@ -18,8 +18,9 @@
   height: 30px;
   width: 30px;
   position: absolute;
-  top: 18px;
-  right: 10px;
+  top: -10px;
+  right: 0;
+  z-index: 2;
 }
 
 .user__preview {
@@ -66,8 +67,14 @@
   @media (max-width: $xs-breakpoint) {
     height: 80px;
   }
+  position: relative;
   border-radius: 50%;
   border: 4px solid red;
+}
+
+.user__image--inner {
+  position: relative;
+  z-index: 1;
 }
 
 .user__online > .user__imageContainer > a > .user__image {
@@ -75,14 +82,14 @@
 }
 
 .user__text {
-  font-size: 14px;
+  font-size: 14px !important;
   word-wrap: none;
   padding-right: 10px;
   @media (max-width: $md-breakpoint) {
-    font-size: 13px;
+    font-size: 13px !important;
   }
   @media (max-width: $s-breakpoint) {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 }
 
@@ -98,12 +105,12 @@
   font-weight: 800;
   text-align: center;
   width: 100%;
-  font-size: 16px;
+  font-size: 16px !important;
   @media (max-width: $md-breakpoint) {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   @media (max-width: $s-breakpoint) {
-    font-size: 12px;
+    font-size: 12px !important;
   }
 }
 
