@@ -21,7 +21,7 @@ Some streamers have mature content that may not be suitable to show to younger a
 
 ## Installation
 
-To install the application you will need to clone the repository by running `git clone https://github.com/jamesgower/twitch-api.git`, or alternatively you can download the contents of the repository in a zip folder. Once the repository has been downloaded you can run the app locally by going navigating to the root directory of the repository and running `npm run start` from CLI. The app can then be found at http://localhost:3000.
+To install the application you will need to clone the repository by running `git clone https://github.com/jamesgower/twitch-api.git`, or alternatively you can download the contents of the repository in a zip folder. Once the repository has been downloaded you can run the app locally by navigating to the root directory of the repository and running `npm install` followed by `npm run start` from CLI. The app can then be found at http://localhost:3000.
 
 ## Usage
 
